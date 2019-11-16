@@ -3,6 +3,8 @@
  */
 package com.pkg.pandiyan.entiry;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,17 +22,31 @@ public class User {
 	
 	@Id
 	@GeneratedValue
-	@Column(name = "user_Id")
+	@Column(name = "Id")
+	private Integer id;
+	
+	@Column(name = "User_Id")
 	private Integer userId;
 	
-	@Column(name = "user_Name")
+	@Column(name = "User_Name")
 	private String userName;
 	
-	@Column(name = "email")
+	@Column(name = "Email")
 	private String email;
 	
-	@Column(name = "password")
+	@Column(name = "Password")
 	private String password;
+
+	@Column(name = "Created_Date")
+	private Date createdDate;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public Integer getUserId() {
 		return userId;
@@ -63,8 +79,13 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	 
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
 	
 }

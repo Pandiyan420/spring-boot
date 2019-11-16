@@ -3,6 +3,7 @@ package com.pkg.pandiyan.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pkg.pandiyan.bean.UserBean;
 import com.pkg.pandiyan.entiry.User;
 import com.pkg.pandiyan.service.UserService;
@@ -22,8 +23,8 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserBean userRegister(UserBean userBean) throws Exception {
 
+		ObjectMapper converter = new ObjectMapper();
 		User user = new User();
-		
 		return null;
 	}
 
